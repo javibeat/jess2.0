@@ -578,9 +578,9 @@ h2 {
     .centre {
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
         margin: auto;
-        width: auto;
     }
 
     .left4 {
