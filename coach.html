@@ -43,7 +43,7 @@
 
 <body>
 
-    <header>
+    <!-- <header>
         <div id="navbar"></div>
     </header>
     <script>
@@ -52,7 +52,11 @@
             .then(data => {
                 document.getElementById('navbar').innerHTML = data;
             });
-    </script>
+    </script> -->
+
+    <header>
+        {% include menu.html %}
+    </header>    
 
     <section class="mainsection">
 

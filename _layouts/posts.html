@@ -6,13 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.9/css/boxicons.min.css" rel="stylesheet">
-
     <!-- Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}">
 
-    <title>CONTACT</title>
+    <title>{{ page.title }}</title>
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="Expat & Career Coach - From surviving to thriving abroad">
@@ -43,48 +41,22 @@
 </head>
 
 <body>
-
     <header>
         {% include menu.html %}
-    </header>    
+    </header>
 
-    <section class="section">
-
-        <div class="calendly">
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/jessicamorari/30min?month=2023-03"
-                style="min-width:320px;height:700px;" ;></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
-        </div>
-
-    </section>
-
-    <div class="section1">
-
-        <h2 class="linea">MEET YOUR COACH</h2>
-            
-        <div class="mail">
-            <h3>E-mail</h3>
-            <a href="mailto:info@jessicamorari.com">info@jessicamorari.com</a>
-        </div>
-
-        <div class="social">
-            <a href="https://www.instagram.com/coachjessicamorari?igsh=N3YybjZnaXVxZ3Bs"><i class='bx bxl-instagram'></i></a>
-            <a href="https://www.facebook.com/profile.php?id=100089151970742"><i class='bx bxl-facebook-circle'></i></a>
-            <a href="https://www.linkedin.com/in/jessica-morari/"><i class='bx bxl-linkedin'></i></a>
-        </div>
-
-    </div>
+    <article class="post-content">
+        {{ content }}
+    </article>
 
     <footer>
-        <img src="assets/images/dots.png" alt="3dots">
-        <p>Jessica Morari | Expat & Career Coach</p>
-        <p> &copy; 2023 All rights reserved.</p>
+        <img src="{{ '/assets/images/dots.png' | prepend: site.baseurl }}" alt="3dots">
+        <p>Jessica Morari | Expat & Career Coach
+        <p></p> &copy; 2023 All rights reserved.</p>
     </footer>
+
+     <script src="{{ '/assets/js/script.js' | prepend: site.baseurl }}"></script>
 
 </body>
 
 </html>
-
-
