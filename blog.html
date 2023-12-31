@@ -51,7 +51,7 @@
 
     <header>
         {% include menu.html %}
-    </header>    
+    </header>
 
     <div class="section1">
         <h1>BLOG</h1>
@@ -72,15 +72,17 @@
     <!-- Posts Container -->
 
     <div class="section1">
-    <div class="posts-container">
-        {% for post in site.posts %}
-        <a href="{{ post.url | prepend: site.baseurl }}" class="post-card {{ post.categories | first }}" style="text-decoration: none;">
-            <!-- Resto del contenido del post -->
-        </a>
-        {% endfor %}
-    </div>
-</div>
 
+        <div class="posts-container">
+            {% for post in site.posts %}
+            <a href="{{ post.url | prepend: site.baseurl }}" class="post-card {{ post.categories | first }}"
+                style="text-decoration: none;">
+                <!-- Resto del contenido del post -->
+            </a>
+            {% endfor %}
+        </div>
+
+    </div>
 
     <script src="assets/js/script.js"></script>
 

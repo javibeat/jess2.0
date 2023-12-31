@@ -6,7 +6,7 @@ email: info@jessicamorari.com
 description: > # Esto es solo un comentario
   Helping expats to shape their experience living abroad, designing their best life and building a fulfilling career in a foreign country
 baseurl: "" # La base de tu URL, si tu sitio está en un subpath, por ejemplo: /blog
-url: "https://jessicamorari.com" # La URL de tu sitio
+url: "https://javibeat.github.io/jess2.0" # La URL de tu sitio
 
 # Construye configuraciones
 markdown: kramdown
