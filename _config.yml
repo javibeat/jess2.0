@@ -11,5 +11,3 @@ url: "https://javibeat.github.io/jess2.0" # La URL de tu sitio
 # Construye configuraciones
 markdown: kramdown
 theme: minima
-plugins:
-  - jekyll-feed
