@@ -199,9 +199,8 @@ input[type=checkbox] {
     height: auto;
     display: flex;
     flex-direction: column;
-    margin: 30px;
     padding: 20px;
-    align-items: start;
+    justify-content: center;
     border-radius: 10px;
     box-sizing: border-box;
 }
@@ -289,6 +288,7 @@ input[type=checkbox] {
 }
 
 .index {
+    text-align: center;
     font-weight: 500;
     margin-bottom: 20px;
 }
