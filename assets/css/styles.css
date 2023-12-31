@@ -293,13 +293,13 @@ input[type=checkbox] {
     margin-bottom: 20px;
 }
 
-/* .mainsection {
+.mainsection {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: url('/assets/images/jess.jpg') center center / cover no-repeat;
     height: 400px;
-} */
+}
 
 @media (max-width: 768px) {
     .centre {
