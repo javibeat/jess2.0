@@ -575,10 +575,11 @@ h2 {
         width: auto;
     }
 
-    .centre4 {
+    .centre {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin: auto;
         width: auto;
     }
 
