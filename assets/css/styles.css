@@ -303,6 +303,9 @@ input[type=checkbox] {
 }
 
 @media (max-width: 768px) {
+    .left {
+        max-width: auto;
+    }
     .centre {
         display: flex;
         flex-direction: column;
