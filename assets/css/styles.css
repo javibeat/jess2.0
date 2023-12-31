@@ -174,7 +174,7 @@ input[type=checkbox] {
 .header {
     display: flex;
     flex-direction: column;
-    background-image: url('assets/images/jess.jpg');
+    background-image: url('https://github.com/javibeat/jess2.0/blob/main/assets/images/jess.jpg?raw=true');
     top: 0;
     left: 0;
     background-size: cover;
