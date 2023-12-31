@@ -200,7 +200,7 @@ input[type=checkbox] {
     display: flex;
     flex-direction: column;
     margin: 30px;
-    padding: 35px;
+    padding: 20px;
     align-items: start;
     border-radius: 10px;
     box-sizing: border-box;
@@ -307,6 +307,7 @@ input[type=checkbox] {
         flex-direction: column;
         justify-content: center;
         margin: auto;
+        width: auto;
     }
 
     .right3 {
