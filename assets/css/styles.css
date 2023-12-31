@@ -307,7 +307,8 @@ input[type=checkbox] {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: auto;
+        width: 100%;
+        padding: 20px;
         width: auto;
     }
 
