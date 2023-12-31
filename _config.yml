@@ -13,7 +13,3 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-
-exclude:
-  - .vscode/
-  - node_modules/
