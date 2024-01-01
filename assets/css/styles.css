@@ -320,6 +320,18 @@ input[type=checkbox] {
     }
 }
 
+@media (max-width: 844px) {
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        height: auto;
+    }
+
+}
+
 /*-----HEADER END-----*/
 
 /*------EXTRAS / ESPACIOS / LÍNEAS / BOTONES---------*/
