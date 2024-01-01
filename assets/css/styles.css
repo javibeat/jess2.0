@@ -610,7 +610,6 @@ h2 {
     gap: 10px;
     /* Espacio entre tarjetas */
     max-width: 1200px;
-    margin: auto;
 }
 
 .cards-container2 {
@@ -701,14 +700,14 @@ button:active {
 
 @media (max-width: 768px) {
     .card {
-        flex-basis: 80%;
-        /* Hace las tarjetas más anchas en pantallas pequeñas */
+        max-width: 100%;
+        margin: auto;
+        text-align: justify;
     }
 
     .cards-container {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
     }
 
