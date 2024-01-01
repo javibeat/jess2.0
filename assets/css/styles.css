@@ -609,6 +609,14 @@ h2 {
     }
 }
 
+@media (max-width: 844px) {
+
+    .centre3 {
+        width: auto;
+    }
+
+}
+
 /*-------SECTIONS END--------*/
 
 /*-----CARDS------*/
