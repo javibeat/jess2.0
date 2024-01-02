@@ -581,7 +581,6 @@ h2 {
 
     .text {
         text-align: justify;
-        font-size: 16px;
     }
 
     .right {
@@ -624,6 +623,10 @@ h2 {
 
 @media (max-width: 844px) {
 
+    .text {
+        font-size: 16px;
+    }
+
     .centre3 {
         width: auto;
     }
@@ -631,6 +634,10 @@ h2 {
 }
 
 @media (max-width: 926px) {
+
+    .text {
+        font-size: 16px;
+    }
 
     .centre3 {
         width: auto;
