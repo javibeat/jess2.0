@@ -15,9 +15,6 @@
 }
 
 /*-----NAVBAR-----*/
-.logo {
-    width: 150px;
-}
 
 a {
     color: black;
@@ -89,23 +86,56 @@ a {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 90px;
-        gap: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
         flex-direction: column;
-        background-color: var(--background-color);
+        background-color: var(--background-color); /* Make sure this variable is defined or replace it with a color value */
         width: 100%;
-        text-align: center;
-        transition:  0.3s;
+        height: 100vh;
+        align-items: normal;
+        justify-content: flex-start;
+        transition: 0.3s;
+        padding-top: 20px; /* Adjust as needed */
+        gap: 0;
     }
 
     .nav-item {
         margin: 5px 0;
-        color: black;
+        width: 100%;
     }
 
     .nav-menu.active {
         left: 0;
-        color: var(--accent-color);
+    }
+
+    .dropdown {
+        display: none;
+        position: static;
+        width: 100%;
+    }
+
+    .dropdown ul {
+        padding: 0;
+        list-style: none;
+        width: 100%;
+    }
+
+    .dropdown ul li {
+        padding: 8px 16px;
+        text-align: center;
+    }
+
+    .dropdown ul li:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* You may also want to add some styles to visually indicate that 
+       "COACHING" is a dropdown toggle */
+    .nav-item:hover .dropdown,
+    .nav-item:focus-within .dropdown {
+        /* Use focus-within to show the dropdown when using keyboard navigation */
+        display: block;
     }
 }
 
@@ -134,34 +164,6 @@ a {
 .nav-item:hover .dropdown {
     display: block;
 }
-
-@media (max-width: 968px) {
-    /* Existing styles for responsive design */
-
-    .nav-item {
-        position: relative;
-    }
-
-    .dropdown {
-        display: none; /* Hidden by default, shown on click */
-        position: static; /* Override absolute positioning */
-        box-shadow: none;
-        background-color: transparent;
-    }
-
-    .dropdown ul {
-        width: 100%; /* Full width */
-    }
-
-    .dropdown ul li {
-        padding: 8px 16px;
-    }
-
-    .dropdown ul li:hover {
-        background-color: #f1f1f1;
-    }
-}
-
 
 
 /*-----NAVBAR END-----*/
