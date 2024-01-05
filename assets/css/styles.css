@@ -17,7 +17,7 @@
 /*-----NAVBAR-----*/
 
 .logo {
-    width: 250px;
+    width: 250px; /* Adjust the width as needed */
 }
 
 a {
@@ -44,16 +44,12 @@ li {
     gap: 60px;
 }
 
-.nav-branding {
-    font-size: 2rem;
-}
-
 .nav-link {
     transition: 0.7s ease;
 }
 
 .nav-link:hover {
-    color: var(--accent-color);
+    color: var(--accent-color); /* Ensure this variable is set or use a direct color value */
 }
 
 .hamburger {
@@ -66,7 +62,6 @@ li {
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: rgb(0, 0, 0);
 }
@@ -74,8 +69,8 @@ li {
 .dropdown {
     display: none;
     position: absolute;
-    background-color: black; /* This should match the nav-menu background */
-    width: 100%; /* Full-width for dropdown items */
+    background-color: black; /* Match the nav-menu background */
+    width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -83,16 +78,16 @@ li {
 .dropdown ul {
     list-style: none;
     padding: 0;
-    margin: 0; /* Reset margin for the dropdown */
+    margin: 0;
 }
 
 .dropdown ul li {
-    padding: 12px 20px; /* Adjust padding as needed */
-    text-align: center; /* Center align the dropdown items */
+    padding: 12px 20px;
+    text-align: center;
 }
 
 .dropdown ul li:hover {
-    background-color: #333; /* Hover effect for dropdown items */
+    background-color: #333;
 }
 
 @media (max-width: 768px) {
@@ -121,37 +116,34 @@ li {
         background-color: black;
         width: 100%;
         text-align: center;
-        transition:  0.3s;
-    }
-
-    .nav-item {
-        margin: 16px 0;
+        transition: 0.3s;
+        z-index: 2; /* Higher than other content but below the fixed overlay if any */
     }
 
     .nav-menu.active {
         left: 0;
     }
 
+    .nav-item {
+        margin: 16px 0;
+    }
+
     .nav-item .dropdown {
-        position: static; /* Remove absolute positioning in responsive mode */
+        position: static; /* Remove absolute positioning */
     }
 
     .nav-menu.active .dropdown {
-        display: block;
+        display: none; /* Keep dropdowns hidden until their parent is clicked */
     }
 
-    .nav-menu {
-        z-index: 2; /* Higher than other content but lower than dropdown */
-        /* Rest of the styles */
-    }
-
-    .nav-menu.active .nav-item .dropdown {
-        display: none; /* Dropdowns are hidden by default and only shown when active */
-        position: static; /* Override absolute positioning */
+    .nav-item:hover .dropdown,
+    .nav-item:focus-within .dropdown {
+        display: none; /* Prevent showing dropdowns on hover/focus in the mobile view */
     }
 }
 
 /*-----NAVBAR END-----*/
+
 
 /*-----HEADER-----*/
 
