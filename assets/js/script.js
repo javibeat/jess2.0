@@ -1,65 +1,63 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-    const coachingNavItem = document.querySelector(".nav-item.has-submenu");
-    const coachingLink = coachingNavItem.querySelector(".nav-link");
-    const coachingSubmenu = coachingNavItem.querySelector(".submenu");
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
-    hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-        // Asegurarse de que el submenú se cierra si el menú hamburguesa se está cerrando
-        if (!hamburger.classList.contains("active") && window.innerWidth <= 768) {
-            coachingSubmenu.classList.remove("active");
-            coachingNavItem.classList.remove("active");
-        }
-    });
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+});
 
-    // Manejar el clic en el enlace "COACHING" para dispositivos móviles
-    coachingLink.addEventListener("click", (e) => {
+// Modifica este selector para excluir el enlace 'COACHING' del comportamiento de cerrar el menú.
+document.querySelectorAll(".nav-menu > .nav-item > .nav-link:not(.toggle-submenu)").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}));
+
+// El código para manejar el submenú no necesita cambios.
+const toggleSubmenuLinks = document.querySelectorAll(".toggle-submenu");
+
+toggleSubmenuLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+        // Asegúrate de que este comportamiento solo se aplique en la versión móvil.
         if (window.innerWidth <= 768) {
-            e.preventDefault(); // Prevenir que el enlace navegue a "#"
-            coachingSubmenu.classList.toggle("active");
-            coachingNavItem.classList.toggle("active");
-        }
-    });
-
-    // Cerrar el submenú cuando se hace clic en un elemento del mismo
-    coachingSubmenu.querySelectorAll('.nav-link').forEach(submenuLink => {
-        submenuLink.addEventListener("click", () => {
-            if (window.innerWidth <= 768) {
-                coachingSubmenu.classList.remove("active");
-                coachingNavItem.classList.remove("active");
+            let parentNavItem = link.parentElement;
+            if (parentNavItem.classList.contains("has-submenu")) {
+                e.preventDefault(); // Evita el comportamiento por defecto si es el enlace de 'COACHING'.
+                parentNavItem.classList.toggle("active");
+                let submenu = parentNavItem.querySelector(".submenu");
+                submenu.classList.toggle("active");
+            } else {
+                // Si no es el enlace de 'COACHING', cierra el menú como de costumbre.
                 hamburger.classList.remove("active");
                 navMenu.classList.remove("active");
             }
-        });
+        }
     });
 });
 
+// Función para filtrar posts según la categoría
+function filterPosts(category) {
+    // Selecciona todos los posts
+    var posts = document.getElementsByClassName('post-card');
+    // Convierte la colección HTML a una matriz para su procesamiento
+    Array.from(posts).forEach(function(post) {
+        // Verifica si el post contiene la clase de categoría o si la categoría es 'all'
+        if (post.classList.contains(category) || category === 'all') {
+            post.style.display = 'block'; // Muestra el post
+        } else {
+            post.style.display = 'none'; // Oculta el post
+        }
+    });
+}
 
-    // Función para filtrar posts según la categoría
-    function filterPosts(category) {
-        var posts = document.getElementsByClassName('post-card');
-        Array.from(posts).forEach(function(post) {
-            if (post.classList.contains(category) || category === 'all') {
-                post.style.display = 'block';
-            } else {
-                post.style.display = 'none';
-            }
-        });
-    }
+document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const accordion = header.parentElement;
 
-    // Manejo de los acordeones
-    document.querySelectorAll('.accordion-header').forEach(header => {
-        header.addEventListener('click', () => {
-            const accordion = header.parentElement;
-            if(accordion.classList.contains('active')) {
-                accordion.classList.remove('active');
-            } else {
-                document.querySelectorAll('.accordion').forEach(acc => acc.classList.remove('active'));
-                accordion.classList.add('active');
-            }
-        });
+        if(accordion.classList.contains('active')) {
+            accordion.classList.remove('active');
+        } else {
+            document.querySelectorAll('.accordion').forEach(acc => acc.classList.remove('active'));
+            accordion.classList.add('active');
+        }
     });
 });
