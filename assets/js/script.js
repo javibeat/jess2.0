@@ -1,37 +1,58 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var checkbox = document.getElementById('checkbox_toggle');
-    var hamburger = document.querySelector('.hamburger');
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
 
-    hamburger.addEventListener('click', function() {
-        checkbox.checked = !checkbox.checked; // Esto alternará el estado del checkbox.
-        document.querySelector('.menu').style.display = checkbox.checked ? 'flex' : 'none';
+    // Event listener para el menú hamburguesa
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
     });
-});
 
-// Función para filtrar posts según la categoría
-function filterPosts(category) {
-    // Selecciona todos los posts
-    var posts = document.getElementsByClassName('post-card');
-    // Convierte la colección HTML a una matriz para su procesamiento
-    Array.from(posts).forEach(function(post) {
-        // Verifica si el post contiene la clase de categoría o si la categoría es 'all'
-        if (post.classList.contains(category) || category === 'all') {
-            post.style.display = 'block'; // Muestra el post
+    // Event listeners para los enlaces del menú
+    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", function(e) {
+        const nextElement = this.nextElementSibling;
+        if (nextElement && nextElement.classList.contains('dropdown')) {
+            // Previene la navegación predeterminada si es un enlace de desplegable
+            e.preventDefault();
+            // Muestra u oculta el menú desplegable
+            const isDropdownVisible = nextElement.style.display === 'block';
+            // Oculta cualquier desplegable abierto
+            document.querySelectorAll('.dropdown').forEach(dropdown => dropdown.style.display = 'none');
+            // Muestra u oculta el desplegable actual
+            nextElement.style.display = isDropdownVisible ? 'none' : 'block';
         } else {
-            post.style.display = 'none'; // Oculta el post
+            // Si no es un desplegable, cierra el menú hamburguesa
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
         }
-    });
-}
+    }));
 
-document.querySelectorAll('.accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-        const accordion = header.parentElement;
+    // Función para filtrar posts según la categoría
+    function filterPosts(category) {
+        // Selecciona todos los posts
+        var posts = document.getElementsByClassName('post-card');
+        // Convierte la colección HTML a una matriz para su procesamiento
+        Array.from(posts).forEach(function(post) {
+            // Verifica si el post contiene la clase de categoría o si la categoría es 'all'
+            if (post.classList.contains(category) || category === 'all') {
+                post.style.display = 'block'; // Muestra el post
+            } else {
+                post.style.display = 'none'; // Oculta el post
+            }
+        });
+    }
 
-        if(accordion.classList.contains('active')) {
-            accordion.classList.remove('active');
-        } else {
-            document.querySelectorAll('.accordion').forEach(acc => acc.classList.remove('active'));
-            accordion.classList.add('active');
-        }
+    // Funcionalidad para los acordeones
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const accordion = header.parentElement;
+
+            if(accordion.classList.contains('active')) {
+                accordion.classList.remove('active');
+            } else {
+                document.querySelectorAll('.accordion').forEach(acc => acc.classList.remove('active'));
+                accordion.classList.add('active');
+            }
+        });
     });
 });
