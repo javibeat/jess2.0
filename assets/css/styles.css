@@ -16,6 +16,10 @@
 
 /*-----NAVBAR-----*/
 
+.logo {
+    max-width: 250px;
+}
+
 a {
     color: black;
     text-decoration: none;
