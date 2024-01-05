@@ -1,24 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Referencias al botón del menú y al menú principal
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");
 
+    // Evento de clic para el botón del menú hamburguesa
     hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
         navMenu.classList.toggle("active");
     });
 
-    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", function(e) {
-        const nextElement = this.nextElementSibling;
-        if (hamburger.classList.contains("active") && nextElement && nextElement.classList.contains('dropdown')) {
-            e.preventDefault();
-            const isVisible = nextElement.style.display === 'block';
-            document.querySelectorAll('.dropdown').forEach(dropdown => dropdown.style.display = 'none');
-            nextElement.style.display = isVisible ? 'none' : 'block';
-        } else {
-            hamburger.classList.remove("active");
-            navMenu.classList.remove("active");
-        }
+    // Excluir el enlace 'COACHING' del comportamiento de cerrar el menú
+    document.querySelectorAll(".nav-menu > .nav-item > .nav-link:not(.toggle-submenu)").forEach(n => n.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
     }));
+
+    // Manejar el submenú en versión móvil
+    const toggleSubmenuLinks = document.querySelectorAll(".toggle-submenu");
+
+    toggleSubmenuLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+            if (window.innerWidth <= 768) {
+                let parentNavItem = link.parentElement;
+                if (parentNavItem.classList.contains("has-submenu")) {
+                    e.preventDefault();
+                    parentNavItem.classList.toggle("active");
+                    let submenu = parentNavItem.querySelector(".submenu");
+                    submenu.classList.toggle("active");
+                } else {
+                    hamburger.classList.remove("active");
+                    navMenu.classList.remove("active");
+                }
+            }
+        });
+    });
 
     // Función para filtrar posts según la categoría
     function filterPosts(category) {
@@ -32,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Funcionalidad para los acordeones
+    // Manejo de los acordeones
     document.querySelectorAll('.accordion-header').forEach(header => {
         header.addEventListener('click', () => {
             const accordion = header.parentElement;
