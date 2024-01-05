@@ -135,6 +135,20 @@ li {
     .nav-item .dropdown {
         position: static; /* Remove absolute positioning in responsive mode */
     }
+
+    .nav-menu.active .dropdown {
+        display: block;
+    }
+
+    .nav-menu {
+        z-index: 2; /* Higher than other content but lower than dropdown */
+        /* Rest of the styles */
+    }
+
+    .nav-menu.active .nav-item .dropdown {
+        display: none; /* Dropdowns are hidden by default and only shown when active */
+        position: static; /* Override absolute positioning */
+    }
 }
 
 /*-----NAVBAR END-----*/
