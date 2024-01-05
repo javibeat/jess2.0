@@ -1,39 +1,42 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Referencias al botón del menú y al menú principal
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");
+    const coachingNavItem = document.querySelector(".nav-item.has-submenu");
+    const coachingLink = coachingNavItem.querySelector(".nav-link");
+    const coachingSubmenu = coachingNavItem.querySelector(".submenu");
 
-    // Evento de clic para el botón del menú hamburguesa
     hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
         navMenu.classList.toggle("active");
+        // Asegurarse de que el submenú se cierra si el menú hamburguesa se está cerrando
+        if (!hamburger.classList.contains("active") && window.innerWidth <= 768) {
+            coachingSubmenu.classList.remove("active");
+            coachingNavItem.classList.remove("active");
+        }
     });
 
-    // Excluir el enlace 'COACHING' del comportamiento de cerrar el menú
-    document.querySelectorAll(".nav-menu > .nav-item > .nav-link:not(.toggle-submenu)").forEach(n => n.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
-    }));
+    // Manejar el clic en el enlace "COACHING" para dispositivos móviles
+    coachingLink.addEventListener("click", (e) => {
+        if (window.innerWidth <= 768) {
+            e.preventDefault(); // Prevenir que el enlace navegue a "#"
+            coachingSubmenu.classList.toggle("active");
+            coachingNavItem.classList.toggle("active");
+        }
+    });
 
-    // Manejar el submenú en versión móvil
-    const toggleSubmenuLinks = document.querySelectorAll(".toggle-submenu");
-
-    toggleSubmenuLinks.forEach(link => {
-        link.addEventListener("click", (e) => {
+    // Cerrar el submenú cuando se hace clic en un elemento del mismo
+    coachingSubmenu.querySelectorAll('.nav-link').forEach(submenuLink => {
+        submenuLink.addEventListener("click", () => {
             if (window.innerWidth <= 768) {
-                let parentNavItem = link.parentElement;
-                if (parentNavItem.classList.contains("has-submenu")) {
-                    e.preventDefault();
-                    parentNavItem.classList.toggle("active");
-                    let submenu = parentNavItem.querySelector(".submenu");
-                    submenu.classList.toggle("active");
-                } else {
-                    hamburger.classList.remove("active");
-                    navMenu.classList.remove("active");
-                }
+                coachingSubmenu.classList.remove("active");
+                coachingNavItem.classList.remove("active");
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
             }
         });
     });
+});
+
 
     // Función para filtrar posts según la categoría
     function filterPosts(category) {
