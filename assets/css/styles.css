@@ -15,6 +15,9 @@
 }
 
 /*-----NAVBAR-----*/
+.logo {
+    width: 150px;
+}
 
 a {
     color: black;
