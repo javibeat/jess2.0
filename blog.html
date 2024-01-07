@@ -70,18 +70,15 @@ title: BLOG
     <!-- Posts Container -->
 
     <div class="section1">
-
-        <div class="section1">
-            <div class="posts-container">
-                {% for post in site.posts %}
-                <a href="{{ post.url | prepend: site.baseurl }}" class="post-card {{ post.categories | first }}"
-                    style="text-decoration: none;">
-                    <!-- Resto del contenido del post -->
-                </a>
-                {% endfor %}
-            </div>
+        <div class="posts-container">
+            {% for post in site.posts %}
+            <a href="{{ post.url | prepend: site.baseurl }}" class="post-card {{ post.categories | first }}"
+                style="text-decoration: none;">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.excerpt }}</p>
+            </a>
+            {% endfor %}
         </div>
-
     </div>
 
     <script src="assets/js/script.js"></script>
