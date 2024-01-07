@@ -904,7 +904,7 @@ button:active {
     flex-basis: 30%;
     max-width: 280px;
     min-width: 280px;
-    text-align: center;
+    text-align: justify;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
