@@ -921,6 +921,26 @@ button:active {
     color: var(--background-color);
 }
 
+/* Ejemplo en styles.css */
+.title-post {
+    font-size: 24px;
+    font-weight: bold;
+    /* más estilos para los títulos de los posts */
+}
+
+.post-content {
+    font-size: 16px;
+    line-height: 1.6;
+    /* más estilos para el contenido del post */
+}
+
+/* Estilos para imágenes dentro de los posts, si es necesario */
+.post-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 @media (max-width: 768px) {
 
     .posts-container {
@@ -940,9 +960,9 @@ button:active {
 
 /*----CALENDLY----*/
 
-/* .calendly {
+.calendly {
     z-index: -5;
-} */
+}
 
 /*--------------FOOTER---------------*/
 
