@@ -906,14 +906,13 @@ button:active {
     min-width: 280px;
     text-align: justify;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     background-color: var(--primary-color);
 }
 
