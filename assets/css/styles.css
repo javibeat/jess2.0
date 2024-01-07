@@ -526,7 +526,7 @@ h2 {
     justify-content: center;
     margin: auto;
     padding: 100px 40px 100px 40px;
-    background-image: url('/assets/images/parallax.png'); /* Asegúrate de tener la ruta correcta a tu imagen */
+    background-image: url('https://github.com/javibeat/jess2.0/blob/ca87e7f4708a4b84e23245cd3e2f344c5bd59acd/assets/images/parallax.png'); /* Asegúrate de tener la ruta correcta a tu imagen */
     background-attachment: fixed; /* Esto es crucial para el efecto parallax */
     background-position: center; /* Centra la imagen en el elemento */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
