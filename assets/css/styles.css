@@ -896,6 +896,9 @@ button:active {
 .posts-container {
     display: flex;
     flex-direction: row;
+}
+
+.post-card {
     background-color: #ad814b;
     padding: 10px;
     border-radius: 15px;
