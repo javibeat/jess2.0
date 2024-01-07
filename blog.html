@@ -3,7 +3,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,9 +11,9 @@
     <!-- Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | prepend: site.baseurl }}">
 
-    <title>BLOG</title>
+    <title>Jessica Morari - BLOG</title>
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="Expat & Career Coach - From surviving to thriving abroad">
@@ -24,29 +23,28 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="jessicamorari.com">
+    <meta property="og:url" content="{{ site.url }}">
     <meta property="og:title" content="Expat & Career Coach - From surviving to thriving abroad">
     <meta property="og:description"
         content="Helping expats to shape their experience living abroad, designing their best life and building a fulfilling career in a foreign country">
-    <meta property="og:image" content="assets/images/logo.webp">
+    <meta property="og:image" content="{{ '/assets/images/logo.webp' | prepend: site.baseurl }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="jessicamorari.com">
+    <meta property="twitter:url" content="{{ site.url }}">
     <meta property="twitter:title" content="Expat & Career Coach - From surviving to thriving abroad">
     <meta property="twitter:description"
         content="Helping expats to shape their experience living abroad, designing their best life and building a fulfilling career in a foreign country">
-    <meta property="twitter:image" content="assets/images/logo.webp">
+    <meta property="twitter:image" content="{{ '/assets/images/logo.webp' | prepend: site.baseurl }}">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/dots.png">
+    <link rel="icon" type="image/png" href="{{ '/assets/images/dots.png' | prepend: site.baseurl }}">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="jessicamorari.com">
+    <link rel="canonical" href="{{ site.url }}">
 
     <!-- <meta name="robots" content="noindex, nofollow"> -->
 </head>
-
 <body>
 
     <header>
@@ -58,7 +56,6 @@
     </div>
 
     <div class="section2">
-
         <div class="category-menu">
             <button class="category-button" onclick="filterPosts('all')">ALL</button>
             <button class="category-button" onclick="filterPosts('lifecoaching')">LIFE COACHING</button>
@@ -66,13 +63,10 @@
             <button class="category-button" onclick="filterPosts('expat')">EXPAT</button>
             <!-- ... más botones de categoría según sea necesario ... -->
         </div>
-
     </div>
 
     <!-- Posts Container -->
-
     <div class="section1">
-
         <div class="posts-container">
             {% for post in site.posts %}
             <a href="{{ post.url | prepend: site.baseurl }}" class="post-card {{ post.categories | first }}"
@@ -81,17 +75,15 @@
             </a>
             {% endfor %}
         </div>
-
     </div>
 
     <footer>
-        <img src="assets/images/dots.png" alt="3dots">
-        <p>Jessica Morari | Expat & Career Coach
-        <p></p> &copy; 2023 All rights reserved.</p>
+        <img src="{{ '/assets/images/dots.png' | prepend: site.baseurl }}" alt="3dots">
+        <p>Jessica Morari | Expat & Career Coach</p>
+        <p>&copy; 2023 All rights reserved.</p>
     </footer>
 
-    <script src="assets/js/script.js"></script>
+    <script src="{{ '/assets/js/script.js' | prepend: site.baseurl }}"></script>
 
 </body>
-
 </html>
