@@ -844,12 +844,6 @@ button:active {
         /* Ajusta el tamaño del texto para dispositivos móviles si es necesario */
     }
 
-    .posts-container {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-    }
-
 }
 
 /*-----END ACORDEON--------*/
@@ -896,6 +890,20 @@ button:active {
 }
 
 /*------END STATS--------*/
+
+/*-----BLOG------*/
+
+@media (max-width: 768px) {
+
+    .category-menu {
+        display: flex;       
+    }
+
+    .category-button {
+        font-size: 12px;
+        margin: 5px;
+    }
+}
 
 /*--------------FOOTER---------------*/
 
