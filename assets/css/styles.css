@@ -900,6 +900,8 @@ button:active {
 
 .post-card {
     background-color: #ad814b;
+    width: 400px;
+    text-align: justify;
     padding: 10px;
     border-radius: 15px;
     gap: 1;
