@@ -74,8 +74,8 @@ title: BLOG
             {% for post in site.posts %}
             <a href="{{ post.url | prepend: site.baseurl }}" class="post-card {{ post.categories | first }}"
                 style="text-decoration: none;">
-                <h2>{{ post.title }}</h2>
-                <p>{{ post.excerpt }}</p>
+                <h2 class="post-title">{{ post.title }}</h2>
+                <p class="post-text">{{ post.excerpt }}</p>
             </a>
             {% endfor %}
         </div>
