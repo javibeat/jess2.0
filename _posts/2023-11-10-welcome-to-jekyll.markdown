@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title:  "Welcome to Jekyll!"
 date:   2023-11-10 14:53:34 +0400
 categories: expat
