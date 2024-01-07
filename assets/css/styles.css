@@ -902,6 +902,7 @@ button:active {
     background-color: #ad814b;
     padding: 10px;
     border-radius: 15px;
+    gap: 1;
 }
 
 
