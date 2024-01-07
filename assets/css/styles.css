@@ -844,6 +844,12 @@ button:active {
         /* Ajusta el tamaño del texto para dispositivos móviles si es necesario */
     }
 
+    .posts-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
 }
 
 /*-----END ACORDEON--------*/
