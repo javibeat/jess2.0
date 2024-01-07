@@ -108,7 +108,7 @@ a {
     display: none; /* Hide toggle button on desktop */
 }
 
-@media (max-width: 868px) {
+@media (max-width: 968px) {
     .hamburger {
         display: block;
     }
