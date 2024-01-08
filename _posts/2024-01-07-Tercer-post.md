@@ -8,14 +8,15 @@ excerpt: "Texto de prueba para la página BLOG."
 categories: career
 ---
 
+![Imagen del mundo](/assets/images/world.png)
 
-Aqued este1 el contenido de mi post. Puedo usar Markdown aqued para formatear mi texto.  
+Aquí está el contenido de mi post. Puedo usar Markdown aquí para formatear mi texto.
 
 Funcionará?
 
 - Puedo hacer listas
 - Estoy probando los formatos.
 
-- Y puedo usar **negrita** o *cursiva* en mi texto.<br>
+Y puedo usar **negrita** o *cursiva* en mi texto.
 
-Tambi\'e9n puedo insertar im\'e1genes, enlaces y otros elementos de Markdown.
+También puedo insertar imágenes, enlaces y otros elementos de Markdown.

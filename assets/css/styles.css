@@ -951,11 +951,12 @@ button:active {
 .post-navigation {
     display: flex;
     justify-content: space-between;
-    margin: 15px;
+    margin-top: 15px;
 }
 
 .previous-post,
 .next-post {
+    margin: 5px;
     padding: 10px;
     background-color: #f4f4f4;
     color: #333;
@@ -982,12 +983,6 @@ button:active {
     .category-button {
         font-size: 12px;
         margin: 5px;
-    }
-
-    .post-navigation {
-        display: flex;
-        justify-content: space-between;
-        margin: 10px;
     }
 }
 
