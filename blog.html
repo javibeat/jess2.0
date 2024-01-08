@@ -70,6 +70,7 @@ title: BLOG
     <!-- Posts Container -->
 
     <div class="section1">
+
         <div class="posts-container">
             {% for post in site.posts %}
             <a href="{{ post.url | prepend: site.baseurl }}" class="post-card {{ post.categories | first }}"
@@ -80,6 +81,8 @@ title: BLOG
             {% endfor %}
         </div>
     </div>
+
+    </section>
 
     <script src="assets/js/script.js"></script>
 
