@@ -927,10 +927,6 @@ button:active {
     max-width: 1000px;
 }
 
-.content {
-    margin-bottom: 25px;
-}
-
 .title-post {
     display: flex;
     justify-content: center;
@@ -945,6 +941,10 @@ button:active {
 .post-content img {
     max-width: 100%;
     height: auto;
+}
+
+.content {
+    margin-bottom: 25px;
 }
 
 .post-navigation {
