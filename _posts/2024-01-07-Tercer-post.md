@@ -8,14 +8,18 @@ excerpt: "Texto de prueba para la página BLOG."
 categories: career
 ---
 
-![Imagen del mundo]({{ '/assets/images/world.png' | prepend: site.baseurl }})<br>
+![Imagen del mundo]({{ '/assets/images/world.png' | prepend: site.baseurl }})
+
+<br>
 
 Aquí está el contenido de mi post. Puedo usar Markdown aquí para formatear mi texto.
 
 Funcionará?
 
 - Puedo hacer listas
-- Estoy probando los formatos. <br>
+- Estoy probando los formatos.
+
+<br>
 
 Y puedo usar **negrita** o *cursiva* en mi texto.  
 
