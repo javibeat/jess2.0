@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Título de prueba"
-date: 2024-01-08 10:35:00 -0500
+date: 2024-01-07 10:35:00 -0400
 permalink: /career-coaching/
 image: /assets/images/world.png
 excerpt: "Texto de prueba para la página BLOG."
