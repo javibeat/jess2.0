@@ -113,7 +113,7 @@ a {
     .hamburger {
         display: block;
     }
-
+    
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
@@ -127,41 +127,36 @@ a {
     }
 
     .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 0;
-        /* Cambiado a 0 para fijar al inicio de la página */
-        height: 100vh;
-        overflow-y: auto;
-        gap: 0;
+        position: absolute; /* changed from fixed to absolute */
+        top: 70px; /* adjusted to align under the navbar */
+        left: 0; /* ensure it aligns to the left edge */
+        right: 0; /* ensure it spans to the right edge */
         flex-direction: column;
         background-color: var(--background-color);
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        z-index: 10;
+        overflow-y: auto; /* allows scrolling within the menu */
+        max-height: calc(100vh - 70px); /* height of the viewport minus the navbar height */
+        transition: transform 0.3s; /* smooth transition for opening and closing */
+        transform: translateY(-100%); /* hide off-screen initially */
+        z-index: 10; /* ensure it's above other content */
+    }
+
+    .nav-menu.active {
+        transform: translateY(0); /* show menu */
     }
 
     .nav-item {
         margin: 16px 0;
     }
 
-    .nav-menu.active {
-        left: 0;
-    }
-
     .has-submenu .submenu {
-        display: none;
-        /* Hide submenu initially on mobile */
+        display: none; /* Hide submenu initially on mobile */
         flex-direction: column;
         width: 100%;
-        position: static;
-        /* Remove absolute positioning */
+        position: static; /* Remove absolute positioning */
     }
 
     .has-submenu.active .submenu {
-        display: flex;
-        /* Show submenu when the parent .nav-item is active */
+        display: flex; /* Show submenu when the parent .nav-item is active */
     }
 }
 
@@ -980,6 +975,11 @@ button:active {
     border-radius: 5px;
 }
 
+.previous-post.title,
+.next-post.title {
+    color: var(--primary-color);
+}
+
 .previous-post:hover,
 .next-post:hover {
     background-color: #e9e9e9;
@@ -1003,7 +1003,7 @@ button:active {
 
     .previous-post,
     .next-post {
-        margin: 5px;
+        justify-content: space-between;
     }
 }
 
