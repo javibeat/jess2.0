@@ -20,7 +20,7 @@ a {
     color: var(--background-color)
 }
 
-/*----NAV BAR MENU----*/
+//*----NAV BAR MENU----*/
 
 header {
     background-color: var(--background-color);
@@ -86,7 +86,7 @@ a {
     display: none;
     position: absolute;
     background-color: var(--background-color);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -105,14 +105,15 @@ a {
 }
 
 .has-submenu .submenu-toggle {
-    display: none; /* Hide toggle button on desktop */
+    display: none;
+    /* Hide toggle button on desktop */
 }
 
 @media (max-width: 968px) {
     .hamburger {
         display: block;
     }
-    
+
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
@@ -128,13 +129,16 @@ a {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 90px;
+        top: 0;
+        /* Cambiado a 0 para fijar al inicio de la página */
+        height: 100vh;
+        overflow-y: auto;
         gap: 0;
         flex-direction: column;
         background-color: var(--background-color);
         width: 100%;
         text-align: center;
-        transition:  0.3s;
+        transition: 0.3s;
         z-index: 10;
     }
 
@@ -147,18 +151,22 @@ a {
     }
 
     .has-submenu .submenu {
-        display: none; /* Hide submenu initially on mobile */
+        display: none;
+        /* Hide submenu initially on mobile */
         flex-direction: column;
         width: 100%;
-        position: static; /* Remove absolute positioning */
+        position: static;
+        /* Remove absolute positioning */
     }
 
     .has-submenu.active .submenu {
-        display: flex; /* Show submenu when the parent .nav-item is active */
+        display: flex;
+        /* Show submenu when the parent .nav-item is active */
     }
 }
 
 /*-----NAVBAR END-----*/
+
 
 /*-----HEADER-----*/
 
@@ -299,10 +307,11 @@ a {
         align-items: center;
         justify-content: center;
     }
-    
+
     .left {
         max-width: auto;
     }
+
     .centre {
         display: flex;
         flex-direction: column;
@@ -503,10 +512,14 @@ h2 {
 .section {
     padding: 100px 20px 100px 20px;
     z-index: -10;
-    background-image: url('https://github.com/javibeat/jess2.0/blob/ca87e7f4708a4b84e23245cd3e2f344c5bd59acd/assets/images/parallax.png'); /* Asegúrate de tener la ruta correcta a tu imagen */
-    background-attachment: fixed; /* Esto es crucial para el efecto parallax */
-    background-position: center; /* Centra la imagen en el elemento */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-image: url('https://github.com/javibeat/jess2.0/blob/ca87e7f4708a4b84e23245cd3e2f344c5bd59acd/assets/images/parallax.png');
+    /* Asegúrate de tener la ruta correcta a tu imagen */
+    background-attachment: fixed;
+    /* Esto es crucial para el efecto parallax */
+    background-position: center;
+    /* Centra la imagen en el elemento */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
     background-size: cover;
 }
 
@@ -527,10 +540,14 @@ h2 {
     justify-content: center;
     margin: auto;
     padding: 100px 40px 100px 40px;
-    background-image: url('https://github.com/javibeat/jess2.0/blob/ca87e7f4708a4b84e23245cd3e2f344c5bd59acd/assets/images/parallax.png'); /* Asegúrate de tener la ruta correcta a tu imagen */
-    background-attachment: fixed; /* Esto es crucial para el efecto parallax */
-    background-position: center; /* Centra la imagen en el elemento */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-image: url('https://github.com/javibeat/jess2.0/blob/ca87e7f4708a4b84e23245cd3e2f344c5bd59acd/assets/images/parallax.png');
+    /* Asegúrate de tener la ruta correcta a tu imagen */
+    background-attachment: fixed;
+    /* Esto es crucial para el efecto parallax */
+    background-position: center;
+    /* Centra la imagen en el elemento */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
     background-size: cover;
 }
 
@@ -956,7 +973,6 @@ button:active {
 
 .previous-post,
 .next-post {
-    margin: 5px;
     padding: 10px;
     background-color: #f4f4f4;
     color: #333;
@@ -977,11 +993,16 @@ button:active {
     }
 
     .category-menu {
-        display: flex;       
+        display: flex;
     }
 
     .category-button {
         font-size: 12px;
+        margin: 5px;
+    }
+
+    .previous-post,
+    .next-post {
         margin: 5px;
     }
 }
