@@ -15,7 +15,7 @@ Aquí está el contenido de mi post. Puedo usar Markdown aquí para formatear mi
 Funcionará?
 
 - Puedo hacer listas
-- Estoy probando los formatos.
+- Estoy probando los formatos. <br>
 
 Y puedo usar **negrita** o *cursiva* en mi texto.  
 
