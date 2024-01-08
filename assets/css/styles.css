@@ -898,6 +898,7 @@ button:active {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -981,6 +982,12 @@ button:active {
     .category-button {
         font-size: 12px;
         margin: 5px;
+    }
+
+    .post-navigation {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
     }
 }
 
