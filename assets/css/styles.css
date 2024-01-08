@@ -943,6 +943,25 @@ button:active {
     height: auto;
 }
 
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.previous-post,
+.next-post {
+    padding: 10px;
+    background-color: #f4f4f4;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.previous-post:hover,
+.next-post:hover {
+    background-color: #e9e9e9;
+}
 
 @media (max-width: 768px) {
 
