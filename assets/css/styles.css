@@ -921,20 +921,19 @@ button:active {
     color: var(--background-color);
 }
 
-/* Ejemplo en styles.css */
+.post-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+}
+
 .title-post {
+    display: flex;
+    justify-content: center;
     font-size: 24px;
     font-weight: bold;
-    /* más estilos para los títulos de los posts */
 }
 
-.post-content {
-    font-size: 16px;
-    line-height: 1.6;
-    /* más estilos para el contenido del post */
-}
-
-/* Estilos para imágenes dentro de los posts, si es necesario */
 .post-content img {
     max-width: 100%;
     height: auto;
