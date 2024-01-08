@@ -66,14 +66,16 @@ title: POST
             </div>
 
             <div class="post-navigation">
+
+                {% if page.next %}
+                <a href="{{ page.next.url | prepend: site.baseurl }}" class="next-post">NEXT: {{ page.next.title }}</a>
+                {% endif %}
+
                 {% if page.previous %}
                 <a href="{{ page.previous.url | prepend: site.baseurl }}" class="previous-post">PREV: {{
                     page.previous.title }}</a>
                 {% endif %}
 
-                {% if page.next %}
-                <a href="{{ page.next.url | prepend: site.baseurl }}" class="next-post">NEXT: {{ page.next.title }}</a>
-                {% endif %}
             </div>
 
         </article>
