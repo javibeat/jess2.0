@@ -927,6 +927,10 @@ button:active {
     max-width: 1000px;
 }
 
+.content {
+    margin-bottom: 25px;
+}
+
 .title-post {
     display: flex;
     justify-content: center;

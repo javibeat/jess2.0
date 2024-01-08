@@ -61,15 +61,18 @@ title: POST
 
             <p class="post-date">{{ page.date | date: "%-d %B %Y" }}</p>
 
-            {{ content }}
+            <div class="content">
+                {{ content }}
+            </div>
 
             <div class="post-navigation">
                 {% if page.previous %}
-                    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="previous-post">Previo: {{ page.previous.title }}</a>
+                <a href="{{ page.previous.url | prepend: site.baseurl }}" class="previous-post">PREV: {{
+                    page.previous.title }}</a>
                 {% endif %}
-    
+
                 {% if page.next %}
-                    <a href="{{ page.next.url | prepend: site.baseurl }}" class="next-post">Siguiente: {{ page.next.title }}</a>
+                <a href="{{ page.next.url | prepend: site.baseurl }}" class="next-post">NEXT: {{ page.next.title }}</a>
                 {% endif %}
             </div>
 
