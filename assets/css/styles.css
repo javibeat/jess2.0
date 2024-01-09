@@ -623,9 +623,9 @@ h2 {
 
 @media (max-width: 844px) {
 
-    .text {
+    /* .text {
         font-size: 14px;
-    }
+    } */
 
     .centre3 {
         width: auto;
@@ -635,9 +635,9 @@ h2 {
 
 @media (max-width: 926px) {
 
-    .text {
+    /* .text {
         font-size: 14px;
-    }
+    } */
 
     .centre3 {
         width: auto;
@@ -836,7 +836,7 @@ button:active {
 
     .accordion-header span,
     .accordion-content p {
-        font-size: 16px;
+        /* font-size: 16px; */
         /* Ajusta el tamaño del texto para dispositivos móviles si es necesario */
     }
 
