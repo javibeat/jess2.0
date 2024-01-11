@@ -28,6 +28,9 @@ header {
 
 li {
     list-style: none;
+}
+
+li a {
     color: black;
 }
 
