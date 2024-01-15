@@ -28,9 +28,6 @@ header {
 
 li {
     list-style: none;
-}
-
-li a {
     color: black;
 }
 
@@ -40,7 +37,7 @@ li a {
 }
 
 .navbar {
-    min-height: 70px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
