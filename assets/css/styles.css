@@ -124,7 +124,7 @@ li {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 90px;
+        top: 70px;
         gap: 0;
         flex-direction: column;
         background-color: var(--background-color);
@@ -132,6 +132,7 @@ li {
         text-align: center;
         transition:  0.3s;
         z-index: 10;
+        color: black;
     }
 
     .nav-item {
