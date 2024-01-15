@@ -30,6 +30,10 @@ li {
     color: black;
 }
 
+li a {
+    color: #000;
+}
+
 .logo {
     width: 300px;
     padding: 12px 0 5px 0;
@@ -394,6 +398,10 @@ h2 {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+.boton1 a {
+    color: var(--background-color);
+}
+
 .boton1:hover {
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
     /* Sombra más prominente al hacer hover */
@@ -414,17 +422,24 @@ h2 {
     margin: auto;
 }
 
+.botonC a {
+    color: var(--background-color);
+}
+
 .boton2 {
     background-color: #ad814b;
     margin-top: 35px;
     display: inline-block;
-    /* Ajusta el ancho al del contenido y permite el uso de padding */
     padding: 15px;
     border-radius: 10px;
     font-size: 18px;
     text-align: center;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.boton2 a {
+    color: var(--background-color);
 }
 
 .boton2:hover {
