@@ -729,7 +729,7 @@ h2 {
 
 .card {
     flex-basis: 30%;
-    max-width: 280px;
+    max-width: 300px;
     min-width: 280px;
     text-align: center;
     padding: 20px;
@@ -772,7 +772,7 @@ h2 {
 
 .texto {
     margin: 25px;
-    /* text-align: justify; */
+    text-align: justify;
 }
 
 button {
