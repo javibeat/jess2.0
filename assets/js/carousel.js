@@ -40,5 +40,5 @@ function moverIzquierda() {
     actualizarCarrusel();
 }
 
-// Cambio automático
-setInterval(moverDerecha, 3000);
+// // Cambio automático
+// setInterval(moverDerecha, 5000);

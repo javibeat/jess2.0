@@ -85,7 +85,7 @@ li a {
     display: none;
     position: absolute;
     background-color: var(--background-color);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -104,14 +104,15 @@ li a {
 }
 
 .has-submenu .submenu-toggle {
-    display: none; /* Hide toggle button on desktop */
+    display: none;
+    /* Hide toggle button on desktop */
 }
 
 @media (max-width: 968px) {
     .hamburger {
         display: block;
     }
-    
+
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
@@ -133,7 +134,7 @@ li a {
         background-color: var(--background-color);
         width: 100%;
         text-align: center;
-        transition:  0.3s;
+        transition: 0.3s;
         z-index: 10;
         color: black;
     }
@@ -147,14 +148,17 @@ li a {
     }
 
     .has-submenu .submenu {
-        display: none; /* Hide submenu initially on mobile */
+        display: none;
+        /* Hide submenu initially on mobile */
         flex-direction: column;
         width: 100%;
-        position: static; /* Remove absolute positioning */
+        position: static;
+        /* Remove absolute positioning */
     }
 
     .has-submenu.active .submenu {
-        display: flex; /* Show submenu when the parent .nav-item is active */
+        display: flex;
+        /* Show submenu when the parent .nav-item is active */
     }
 }
 
@@ -291,7 +295,8 @@ li a {
     align-items: center;
     background: url('https://github.com/javibeat/jess2.0/blob/main/assets/images/jess.jpg?raw=true') center center / cover no-repeat;
     height: 400px;
-    position: relative; /* Importante para posicionar correctamente el pseudo-elemento */
+    position: relative;
+    /* Importante para posicionar correctamente el pseudo-elemento */
 }
 
 .mainsection::before {
@@ -310,10 +315,11 @@ li a {
         align-items: center;
         justify-content: center;
     }
-    
+
     .left {
         max-width: auto;
     }
+
     .centre {
         display: flex;
         flex-direction: column;
@@ -556,10 +562,14 @@ h2 {
 .section {
     padding: 100px 20px 100px 20px;
     z-index: -10;
-    background-image: url('https://github.com/javibeat/jess2.0/blob/ca87e7f4708a4b84e23245cd3e2f344c5bd59acd/assets/images/parallax.png'); /* Asegúrate de tener la ruta correcta a tu imagen */
-    background-attachment: fixed; /* Esto es crucial para el efecto parallax */
-    background-position: center; /* Centra la imagen en el elemento */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-image: url('https://github.com/javibeat/jess2.0/blob/ca87e7f4708a4b84e23245cd3e2f344c5bd59acd/assets/images/parallax.png');
+    /* Asegúrate de tener la ruta correcta a tu imagen */
+    background-attachment: fixed;
+    /* Esto es crucial para el efecto parallax */
+    background-position: center;
+    /* Centra la imagen en el elemento */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
     background-size: cover;
 }
 
@@ -580,10 +590,14 @@ h2 {
     justify-content: center;
     margin: auto;
     padding: 100px 40px 100px 40px;
-    background-image: url('https://github.com/javibeat/jess2.0/blob/ca87e7f4708a4b84e23245cd3e2f344c5bd59acd/assets/images/parallax.png'); /* Asegúrate de tener la ruta correcta a tu imagen */
-    background-attachment: fixed; /* Esto es crucial para el efecto parallax */
-    background-position: center; /* Centra la imagen en el elemento */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-image: url('https://github.com/javibeat/jess2.0/blob/ca87e7f4708a4b84e23245cd3e2f344c5bd59acd/assets/images/parallax.png');
+    /* Asegúrate de tener la ruta correcta a tu imagen */
+    background-attachment: fixed;
+    /* Esto es crucial para el efecto parallax */
+    background-position: center;
+    /* Centra la imagen en el elemento */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
     background-size: cover;
 }
 
@@ -745,8 +759,7 @@ h2 {
 }
 
 .card2 {
-    flex-basis: 30%;
-    width: 100px;
+    flex-basis: 40%;
     min-width: 280px;
     text-align: center;
     padding: 20px;
@@ -836,6 +849,110 @@ button:active {
 }
 
 /*-----END CARDS----*/
+
+/* CAROUSEL */
+
+.carrusel {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carrusel-contenedor {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease;
+}
+
+.tarjeta {
+    width: calc(100% / 3);
+    max-width: 90%;
+    margin: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 15px;
+    background-color: #ad814b59;
+}
+
+.tarjeta img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--background-color2);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.flecha.izquierda {
+    left: 10px;
+}
+
+.flecha.derecha {
+    right: 10px;
+}
+
+.puntos-navegacion {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.punto {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.punto.activo {
+    background-color: #333;
+}
+
+@media (max-width: 768px) {
+    .carrusel-contenedor {
+        width: 300%;
+    }
+
+    .tarjeta {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .flecha {
+        font-size: 15px;
+        /* Ajusta el tamaño si es necesario */
+        top: calc(50% - 20px);
+        /* Ajusta la posición de las flechas */
+    }
+
+    .carrusel {
+        height: auto;
+        /* Esto permite que el carrusel crezca con el contenido */
+    }
+}
+
+/* FIN CAROUSEL */
+
 
 /* --------ACCORDEÓN--------- */
 
@@ -1028,7 +1145,7 @@ button:active {
     }
 
     .category-menu {
-        display: flex;       
+        display: flex;
     }
 
     .category-button {
