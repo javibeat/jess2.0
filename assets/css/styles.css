@@ -859,6 +859,7 @@ button:active {
     margin: auto;
     overflow: hidden;
     position: relative;
+    padding: 20px 0;
 }
 
 .carrusel-contenedor {
@@ -869,8 +870,8 @@ button:active {
 
 .tarjeta {
     width: calc(100% / 3);
-    max-width: 90%;
-    margin: 10px;
+    max-width: 100%;
+    margin: 5px;
     box-sizing: border-box;
     padding: 20px;
     text-align: center;
@@ -884,17 +885,24 @@ button:active {
     height: auto;
     border-radius: 50%;
     margin-bottom: 10px;
-    margin-bottom: 15px;
+}
+
+.testimonial {
+    text-align: justify;
+    margin: 5px;
 }
 
 .flecha {
     position: absolute;
-    top: 50%;
+    top: 20%;
     transform: translateY(-50%);
     background-color: var(--background-color2);
-    border: none;
+    border: 1px solid var(--background-color2);
+    border-radius: 5px;
+    padding: 10px;
     cursor: pointer;
     font-size: 24px;
+    z-index: 100;
 }
 
 .flecha.izquierda {
@@ -907,7 +915,7 @@ button:active {
 
 .puntos-navegacion {
     position: absolute;
-    bottom: 10px;
+    bottom: 1px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -928,6 +936,7 @@ button:active {
 }
 
 @media (max-width: 768px) {
+
     .carrusel-contenedor {
         width: 300%;
     }
@@ -940,9 +949,7 @@ button:active {
 
     .flecha {
         font-size: 15px;
-        /* Ajusta el tamaño si es necesario */
-        top: calc(50% - 20px);
-        /* Ajusta la posición de las flechas */
+        top: 10%;
     }
 
     .carrusel {
