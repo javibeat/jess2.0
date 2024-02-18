@@ -293,7 +293,7 @@ li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url('https://github.com/javibeat/jess2.0/blob/main/assets/images/jess.jpg?raw=true') center center / cover no-repeat;
+    background: url('https://github.com/javibeat/jess2.0/blob/main/assets/images/jesstop.jpg?raw=true') center center / cover no-repeat;
     height: 400px;
     position: relative;
     /* Importante para posicionar correctamente el pseudo-elemento */
@@ -306,7 +306,7 @@ li a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 768px) {
@@ -371,6 +371,11 @@ h1 {
     margin-top: 75px;
     font-size: 80px;
     font-weight: 300;
+    z-index: 1;
+}
+
+.title2 {
+    z-index: 1;
 }
 
 h2 {
@@ -551,6 +556,7 @@ h2 {
     .title2 {
         font-size: 20px;
         margin: 0 50px;
+        z-index: 1;
     }
 }
 
@@ -591,14 +597,16 @@ h2 {
     margin: auto;
     padding: 100px 40px 100px 40px;
     background-image: url('https://github.com/javibeat/jess2.0/blob/ca87e7f4708a4b84e23245cd3e2f344c5bd59acd/assets/images/parallax.png');
-    /* Asegúrate de tener la ruta correcta a tu imagen */
     background-attachment: fixed;
-    /* Esto es crucial para el efecto parallax */
     background-position: center;
-    /* Centra la imagen en el elemento */
     background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
     background-size: cover;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ff2c2c;
 }
 
 .sectionfeedback {
@@ -709,10 +717,6 @@ h2 {
 
 @media (max-width: 844px) {
 
-    /* .text {
-        font-size: 14px;
-    } */
-
     .centre3 {
         width: auto;
     }
@@ -720,10 +724,6 @@ h2 {
 }
 
 @media (max-width: 926px) {
-
-    /* .text {
-        font-size: 14px;
-    } */
 
     .centre3 {
         width: auto;
@@ -734,15 +734,19 @@ h2 {
 /*-------SECTIONS END--------*/
 
 /*-----CARDS------*/
+.logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1200px;
+}
 
 .cards-container {
     display: flex;
     justify-content: center;
-    /* Centra las tarjetas horizontalmente */
     flex-wrap: wrap;
-    /* Permite que las tarjetas se ajusten en filas en pantallas más pequeñas */
     gap: 10px;
-    /* Espacio entre tarjetas */
     max-width: 1200px;
 }
 
