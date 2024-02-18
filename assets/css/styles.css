@@ -293,7 +293,7 @@ li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url('https://github.com/javibeat/jess2.0/blob/main/assets/images/jesstop.jpg?raw=true') center center / cover no-repeat;
+    background: url('https://github.com/javibeat/jess2.0/blob/main/assets/images/main1.jpg?raw=true') center center / cover no-repeat;
     height: 400px;
     position: relative;
     /* Importante para posicionar correctamente el pseudo-elemento */
@@ -306,7 +306,47 @@ li a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.mainsection2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('https://github.com/javibeat/jess2.0/blob/main/assets/images/main2.jpg?raw=true') center center / cover no-repeat;
+    height: 400px;
+    position: relative;
+    /* Importante para posicionar correctamente el pseudo-elemento */
+}
+
+.mainsection2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.mainsection3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('https://github.com/javibeat/jess2.0/blob/main/assets/images/jesstop.jpg?raw=true') center center / cover no-repeat;
+    height: 400px;
+    position: relative;
+    /* Importante para posicionar correctamente el pseudo-elemento */
+}
+
+.mainsection3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 @media (max-width: 768px) {
