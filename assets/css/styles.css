@@ -166,7 +166,7 @@ li a {
 
 /*-----HEADER-----*/
 
-.header {
+.header1 {
     display: flex;
     flex-direction: column;
     background-image: url('https://github.com/javibeat/jess2.0/blob/main/assets/images/jess.jpg?raw=true');
@@ -376,7 +376,7 @@ li a {
 
 @media (max-width: 844px) {
 
-    .header {
+    .header1 {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -387,7 +387,7 @@ li a {
 
 @media (max-width: 926px) {
 
-    .header {
+    .header1 {
         display: flex;
         flex-direction: column;
         align-items: center;
