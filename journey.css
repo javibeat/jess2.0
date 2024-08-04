@@ -197,6 +197,7 @@ main {
 
 .card p {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .card h3 {
