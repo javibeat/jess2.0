@@ -236,6 +236,27 @@ main {
     margin-bottom: 15px;
 }
 
+.section6 {
+    width: 100%;
+    display: flex;
+    margin: 0 auto 100px;
+    align-items: center;
+    /* background-color: var(--primary-color); */
+    display: flex;
+    flex-direction: column;
+}
+
+.section6 h2 {
+    font-family: 'Impact', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.section6 p {
+    margin-bottom: 15px;
+}
+
 @media (max-width: 768px) {
     .button {
         width: 100%;
@@ -301,5 +322,15 @@ main {
 
     .card5 {
         padding: 15px 0 0 0;
+    }
+
+    .section6 {
+        margin: 0 auto 50px;
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .section6 p {
+        text-align: justify;
     }
 }
