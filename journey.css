@@ -214,7 +214,32 @@ main {
     max-width: 500px;
 }
 
+.section5 {
+    width: 100%;
+    display: flex;
+    margin: 0 auto 100px;
+    align-items: center;
+    /* background-color: var(--primary-color); */
+}
+
+.card5 {
+    padding: 15px 50px;
+}
+
+.card5 h2 {
+    font-family: 'Impact', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 25px;
+}
+
+.card5 p {
+    margin-bottom: 15px;
+}
+
 @media (max-width: 768px) {
+    .button {
+        width: 100%;
+    }
     .section1 {
         margin: 50px auto;
         width: 90%;
@@ -266,5 +291,15 @@ main {
     .card4 h1 {
         line-height: 1em;
         margin: 0 0 10px;
+    }
+
+    .section5 {
+        margin: 0 auto 50px;
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .card5 {
+        padding: 15px 0 0 0;
     }
 }
