@@ -140,7 +140,7 @@ main {
 .section2 {
     /* background-color: var(--primary-color); */
     width: 100%;
-    padding: 25px;
+    padding: 0 25px;
     display: flex;
     margin: auto auto 100px;
     flex-direction: column;
