@@ -1077,11 +1077,10 @@ button:active {
         /* O el porcentaje que prefieras */
     }
 
-    .accordion-header span,
+    /* .accordion-header span,
     .accordion-content p {
-        /* font-size: 16px; */
-        /* Ajusta el tamaño del texto para dispositivos móviles si es necesario */
-    }
+        font-size: 16px; 
+    } */
 
 }
 
