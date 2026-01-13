@@ -35,7 +35,8 @@
   <!-- End Meta Pixel Code -->
 
   <meta name="description"
-    content="Life Design Coach helping high-achieving women redefine success and design a life that fits their values, career goals, and ambitions. Based in Dubai, coaching globally.">
+    content="Jessica Morari is a Life Design Coach helping high-achieving women redefine success and design a life that fits their values, career goals, and ambitions. Based in Dubai, coaching globally using her proprietary Life Design Method™.">
+  <meta name="author" content="Jessica Morari">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://jessicamorari.com/">
 
@@ -59,21 +60,77 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Jessica Morari",
-      "url": "https://jessicamorari.com",
-      "jobTitle": "Life Design Coach",
-      "description": "Life Design Coach helping high-achieving women redefine success and design a life that fits their values and ambitions.",
-      "image": "https://jessicamorari.com/images/jess.webp",
-      "sameAs": [
-        "https://www.linkedin.com/in/jessica-morari/",
-        "https://www.instagram.com/coachjessicamorari/"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dubai",
-        "addressCountry": "UAE"
-      }
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://jessicamorari.com/#person",
+          "name": "Jessica Morari",
+          "url": "https://jessicamorari.com",
+          "jobTitle": "Life Design Coach",
+          "description": "Life Design Coach helping high-achieving women redefine success and design a life that fits their values and ambitions through her proprietary Life Design Method™.",
+          "image": "https://jessicamorari.com/images/jess.webp",
+          "knowsAbout": [
+            "Life Design",
+            "Executive Coaching",
+            "Women's Leadership",
+            "Career Strategy",
+            "Personal Development"
+          ],
+          "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "name": "ICF Accredited Coach Training Program (ACTP)",
+            "credentialCategory": "Certification"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/jessica-morari/",
+            "https://www.instagram.com/coachjessicamorari/"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dubai",
+            "addressRegion": "Dubai",
+            "addressCountry": "UAE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://jessicamorari.com/#website",
+          "url": "https://jessicamorari.com",
+          "name": "Jessica Morari | Life Design Coach",
+          "description": "Professional website of Jessica Morari, Life Design Coach for high-achieving women.",
+          "publisher": { "@id": "https://jessicamorari.com/#person" }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://jessicamorari.com/#service",
+          "name": "Jessica Morari Coaching",
+          "image": "https://jessicamorari.com/images/jess.webp",
+          "url": "https://jessicamorari.com",
+          "telephone": "",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dubai",
+            "addressCountry": "UAE"
+          },
+          "priceRange": "$$",
+          "description": "Providing Life Design Coaching and Corporate Consulting services globally.",
+          "founder": { "@id": "https://jessicamorari.com/#person" }
+        },
+        {
+          "@type": "Service",
+          "serviceType": "Life Design Coaching",
+          "provider": { "@id": "https://jessicamorari.com/#person" },
+          "description": "1-on-1 coaching for ambitious women to redefine success and design a life aligned with their values.",
+          "areaServed": "Worldwide"
+        },
+        {
+          "@type": "Service",
+          "serviceType": "Corporate Coaching & Consulting",
+          "provider": { "@id": "https://jessicamorari.com/#person" },
+          "description": "Executive coaching, team workshops, and culture consulting for organizations.",
+          "areaServed": "Worldwide"
+        }
+      ]
     }
     </script>
 
@@ -104,7 +161,9 @@
 <body class="bg-white text-secondary">
   <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=497747835928792&ev=PageView&noscript=1" /></noscript>
-  <div id="root"></div>
+  <main id="main-content">
+    <div id="root"></div>
+  </main>
 </body>
 
 </html>
