@@ -11,6 +11,11 @@
   <link rel="preconnect" href="https://connect.facebook.net">
   <link rel="dns-prefetch" href="https://assets.calendly.com">
 
+  <!-- Preload critical resources for LCP -->
+  <link rel="preload" href="./images/jess_mobile.webp" as="image" type="image/webp" media="(max-width: 768px)">
+  <link rel="preload" href="./images/women.webp" as="image" type="image/webp" media="(min-width: 769px)">
+  <link rel="preload" href="./assets/index-BZJ3J88V.css" as="style">
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-19TXSNYL76"></script>
   <script>
@@ -251,18 +256,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./favicon.png">
 
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0"
-  }
-}
-</script>
-  <script type="module" crossorigin src="./assets/index-SKxbiR1c.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-BZJ3J88V.css">
 </head>
 
@@ -291,6 +284,19 @@
         corporate clients in Dubai and worldwide.</p>
     </article>
   </section>
+  <!-- Scripts moved to end of body to prevent render-blocking -->
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="./assets/index-SKxbiR1c.js"></script>
 </body>
 
 </html>
