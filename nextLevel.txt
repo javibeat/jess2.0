@@ -1,0 +1,21 @@
+# NEXT LEVEL: Project Roadmap
+
+Goals to elevate the platform, authority, and lead generation for Jessica Morari.
+
+## Phase 1: Authority & Trust (Short-term)
+- [ ] **Video Introduction**: High-quality video on the homepage explaining the Life Design Method™.
+- [ ] **Client Testimonials Expansion**: Add a dedicated section or carousel with deep-dive case studies.
+- [ ] **Google Business Profile**: Optimization for "Dubai" searches to complement on-page SEO.
+
+## Phase 2: Content & SEO (Medium-term)
+- [ ] **The Life Design Blog**: 1-2 monthly articles on high-intent topics (e.g., "Redefining success in a high-pressure city").
+- [ ] **LinkedIn Authority**: Synchronize website content with regular LinkedIn thought leadership.
+- [ ] **Interactive Quiz**: "Find your current Life Design alignment" (Lead magnet to capture emails).
+
+## Phase 3: Technical & UX (Ongoing)
+- [ ] **Speed Optimization**: Continual monitoring of Core Web Vitals (LCP/FCP).
+- [ ] **Dark Mode implementation**: For a premium, modern aesthetic option.
+- [ ] **Multilingual Support**: Arabic version for the local Dubai/UAE market.
+
+---
+*Next Level is about moving from a professional landing page to a global authority platform.*
