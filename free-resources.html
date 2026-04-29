@@ -214,6 +214,8 @@
       .ml-error input,
       .ml-error textarea,
       .ml-error select { border-color: red !important; }
+      .spotify-apple-gap { margin-top: -50px; }
+      @media (min-width: 1024px) { .spotify-apple-gap { margin-top: -120px; } }
     </style>
   </head>
 
@@ -866,7 +868,7 @@
                         loading="lazy"
                       ></iframe>
 
-                      <div style="margin-top: -120px">
+                      <div class="spotify-apple-gap">
                         <iframe
                           src="https://embed.podcasts.apple.com/us/podcast/make-today-count/id1884347526"
                           title="Make Today Count on Apple Podcasts"
