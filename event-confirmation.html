@@ -53,10 +53,28 @@
       );
       fbq("init", "497747835928792");
       fbq("track", "PageView");
+
+      const checkoutSessionId = new URLSearchParams(window.location.search).get("session_id");
+      if (checkoutSessionId && /^cs_live_/.test(checkoutSessionId)) {
+        const storageKey = `meta_purchase_${checkoutSessionId}`;
+        if (window.localStorage.getItem(storageKey) !== "tracked") {
+          fbq(
+            "track",
+            "Purchase",
+            {
+              content_name: "The Life Design System Workshop",
+              value: 147,
+              currency: "AED",
+            },
+            { eventID: `stripe_${checkoutSessionId}` },
+          );
+          window.localStorage.setItem(storageKey, "tracked");
+        }
+      }
       }
     </script>
     <!-- End Meta Pixel Code -->
-    <!-- Purchase tracking intentionally omitted until Stripe success validation is configured. -->
+    <!-- Purchase is client-side gated by Stripe's Checkout Session ID. Server-side validation can be added later. -->
 
     <meta name="description" content="Your place for The Life Design System live online workshop is confirmed." />
     <meta name="author" content="Jessica Morari" />
