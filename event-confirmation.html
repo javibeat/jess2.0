@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Booking Confirmed | The Life Design System</title>
+    <title>Prenotazione confermata | Life Design</title>
 
     <!-- Preconnect to third-party origins for faster loading -->
     <link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -62,9 +62,9 @@
             "track",
             "Purchase",
             {
-              content_name: "The Life Design System Workshop",
-              value: 147,
-              currency: "AED",
+              content_name: "Life Design Workshop",
+              value: 42,
+              currency: "EUR",
             },
             { eventID: `stripe_${checkoutSessionId}` },
           );
@@ -76,7 +76,7 @@
     <!-- End Meta Pixel Code -->
     <!-- Purchase is client-side gated by Stripe's Checkout Session ID. Server-side validation can be added later. -->
 
-    <meta name="description" content="Your place for The Life Design System live online workshop is confirmed." />
+    <meta name="description" content="Il tuo posto per il workshop online Life Design è confermato." />
     <meta name="author" content="Jessica Morari" />
     <link rel="canonical" href="https://jessicamorari.com/event-confirmation.html" />
     <meta name="robots" content="noindex, nofollow" />
@@ -86,11 +86,11 @@
     <meta property="og:url" content="https://jessicamorari.com/event-confirmation.html" />
     <meta
       property="og:title"
-      content="Booking Confirmed | The Life Design System"
+      content="Prenotazione confermata | Life Design"
     />
     <meta
       property="og:description"
-      content="Your place for The Life Design System live online workshop is confirmed."
+      content="Il tuo posto per il workshop online Life Design è confermato."
     />
     <meta
       property="og:image"
@@ -102,11 +102,11 @@
     <meta property="twitter:url" content="https://jessicamorari.com/event-confirmation.html" />
     <meta
       property="twitter:title"
-      content="Booking Confirmed | The Life Design System"
+      content="Prenotazione confermata | Life Design"
     />
     <meta
       property="twitter:description"
-      content="Your place for The Life Design System live online workshop is confirmed."
+      content="Il tuo posto per il workshop online Life Design è confermato."
     />
     <meta
       property="twitter:image"
@@ -120,8 +120,9 @@
         "@type": "WebPage",
         "@id": "https://jessicamorari.com/event-confirmation.html",
         "url": "https://jessicamorari.com/event-confirmation.html",
-        "name": "Booking Confirmed | The Life Design System",
-        "description": "Confirmation page for The Life Design System live online workshop.",
+        "name": "Prenotazione confermata | Life Design",
+        "inLanguage": "it",
+        "description": "Pagina di conferma del workshop online Life Design.",
         "isPartOf": {
           "@type": "WebSite",
           "url": "https://jessicamorari.com",
@@ -346,14 +347,14 @@
                   </svg>
                 </div>
                 <span class="text-primary-light font-bold title-caps tracking-widest text-sm block mb-4">
-                  Payment confirmed
+                  Pagamento confermato
                 </span>
                 <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold title-caps mb-6 text-white">
-                  You’re in.
+                  Ci sei!
                 </h1>
                 <p class="text-xl text-gray-200 leading-relaxed max-w-2xl mx-auto">
-                  Your place for <strong class="text-white">The Life Design System</strong> is confirmed.
-                  We can’t wait to welcome you.
+                  Il tuo posto per il workshop <strong class="text-white">Life Design</strong> è confermato.
+                  Non vedo l’ora di accoglierti.
                 </p>
               </div>
             </section>
@@ -363,28 +364,28 @@
                 <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
                   <div class="p-8">
                     <span class="text-primary font-bold title-caps tracking-widest text-xs block mb-4">
-                      Save the date
+                      Segna la data
                     </span>
                     <h2 class="text-2xl sm:text-3xl font-bold title-caps text-secondary mb-8">
-                      Live online workshop
+                      Hai mai progettato davvero la tua vita?
                     </h2>
 
                     <dl>
                       <div class="py-5 grid grid-cols-2 gap-6 border-b border-gray-200">
-                        <dt class="font-bold text-secondary">Date</dt>
-                        <dd class="text-gray-600">Sunday, 27 September 2026</dd>
+                        <dt class="font-bold text-secondary">Data</dt>
+                        <dd class="text-gray-600">Domenica 11 ottobre 2026</dd>
                       </div>
                       <div class="py-5 grid grid-cols-2 gap-6 border-b border-gray-200">
-                        <dt class="font-bold text-secondary">UAE time</dt>
-                        <dd class="text-gray-600">7:00–8:30 PM</dd>
+                        <dt class="font-bold text-secondary">Orario</dt>
+                        <dd class="text-gray-600">17:00–18:30, ora italiana</dd>
                       </div>
                       <div class="py-5 grid grid-cols-2 gap-6 border-b border-gray-200">
-                        <dt class="font-bold text-secondary">UK time</dt>
-                        <dd class="text-gray-600">4:00–5:30 PM</dd>
+                        <dt class="font-bold text-secondary">Dove</dt>
+                        <dd class="text-gray-600">Live su Google Meet</dd>
                       </div>
                       <div class="py-5 grid grid-cols-2 gap-6">
-                        <dt class="font-bold text-secondary">Duration</dt>
-                        <dd class="text-gray-600">90 minutes</dd>
+                        <dt class="font-bold text-secondary">Durata</dt>
+                        <dd class="text-gray-600">90 minuti</dd>
                       </div>
                     </dl>
                   </div>
@@ -392,21 +393,22 @@
 
                 <div class="mt-12 max-w-2xl mx-auto text-center">
                   <h2 class="text-2xl sm:text-3xl font-bold title-caps text-secondary mb-6">
-                    What happens next?
+                    E adesso?
                   </h2>
                   <p class="text-xl text-gray-600 leading-relaxed mb-6">
-                    Stripe will email your payment receipt. We’ll send the workshop access details
-                    to the email address you used at checkout before the event.
+                    Riceverai via email la ricevuta di pagamento di Stripe. Prima del workshop ti invieremo
+                    il link di Google Meet all’indirizzo email che hai usato al checkout.
                   </p>
                   <p class="text-gray-500 leading-relaxed mb-8">
-                    Please add <a class="text-primary font-semibold hover:text-secondary transition-colors" href="mailto:info@jessicamorari.com">info@jessicamorari.com</a>
-                    to your contacts and check your spam or promotions folder if you don’t see our message.
+                    Aggiungi <a class="text-primary font-semibold hover:text-secondary transition-colors" href="mailto:info@jessicamorari.com">info@jessicamorari.com</a>
+                    ai tuoi contatti e, se non vedi il nostro messaggio, controlla la cartella spam o promozioni.
+                    E tieni a portata di mano carta e penna: ti serviranno!
                   </p>
                   <a
                     class="inline-block bg-primary text-white px-10 py-4 rounded-full font-bold title-caps text-base shadow-xl shadow-primary/20 hover:scale-105 transition-transform"
                     href="index.html"
                   >
-                    Return to the website
+                    Torna al sito
                   </a>
                 </div>
               </div>
