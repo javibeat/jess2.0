@@ -310,20 +310,87 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Form submit
   if (waitlistForm) {
-    waitlistForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const data = new FormData(waitlistForm);
-      const name = data.get('name');
-      // For now just show confirmation — connect to backend later
-      waitlistForm.innerHTML = `
-        <div class="text-center py-8">
-          <p class="text-2xl font-bold text-secondary mb-2">You're on the list!</p>
-          <p class="text-gray-600">Thanks ${name}! We'll notify you when The Lab opens its doors.</p>
-        </div>
-      `;
-    });
+    handleEmailForm(waitlistForm, (name) => ({
+      title: "You're on the list!",
+      message: `Thanks${name ? ' ' + name : ''}! We'll notify you when The Lab opens its doors.`,
+    }));
+  }
+
+  // ──────────────────────────────────────────────
+  // 8. Corporate workshop inquiry form
+  // ──────────────────────────────────────────────
+  const workshopForm = document.getElementById('workshop-inquiry-form');
+  if (workshopForm) {
+    handleEmailForm(workshopForm, (name) => ({
+      title: 'Thank you!',
+      message: `Thanks${name ? ' ' + name : ''}, your request has been sent. I'll get back to you within 2-3 business days.`,
+    }));
   }
 
 });
+
+// ──────────────────────────────────────────────
+// Email forms (FormSubmit → info@jessicamorari.com)
+// ──────────────────────────────────────────────
+function formToPayload(form) {
+  const payload = {};
+  new FormData(form).forEach((value, key) => {
+    payload[key] = key in payload ? `${payload[key]}, ${value}` : value;
+  });
+  payload._subject = form.dataset.subject || 'New website form submission';
+  payload._template = 'table';
+  payload._captcha = 'false';
+  return payload;
+}
+
+function showFormMessage(form, title, message, isError) {
+  let box = form.querySelector('[data-form-message]');
+  if (!box) {
+    box = document.createElement('div');
+    box.setAttribute('data-form-message', '');
+    box.setAttribute('role', 'status');
+    box.className = 'text-center py-8';
+  }
+  const heading = document.createElement('p');
+  heading.className = 'text-2xl font-bold mb-2 text-secondary';
+  if (isError) heading.style.color = '#b91c1c';
+  heading.textContent = title;
+  const body = document.createElement('p');
+  body.className = 'text-gray-600';
+  body.textContent = message;
+  box.replaceChildren(heading, body);
+  if (isError) {
+    form.appendChild(box);
+  } else {
+    form.replaceChildren(box);
+  }
+}
+
+function handleEmailForm(form, successText) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const payload = formToPayload(form);
+    if (payload._honey) return;
+    const button = form.querySelector('[type="submit"]');
+    if (button) button.disabled = true;
+    try {
+      const res = await fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const { title, message } = successText(String(payload.name || payload.fullName || '').trim());
+      showFormMessage(form, title, message, false);
+    } catch {
+      showFormMessage(
+        form,
+        'Something went wrong',
+        'Your message could not be sent. Please try again or email info@jessicamorari.com.',
+        true
+      );
+      if (button) button.disabled = false;
+    }
+  });
+}
