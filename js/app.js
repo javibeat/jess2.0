@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ──────────────────────────────────────────────
-// Email forms (FormSubmit → info@jessicamorari.com)
+// Email forms (FormSubmit alias → info@jessicamorari.com)
 // ──────────────────────────────────────────────
 function formToPayload(form) {
   const payload = {};
