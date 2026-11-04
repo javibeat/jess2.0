@@ -88,7 +88,7 @@
       hreflang="x-default"
       href="https://jessicamorari.com/life-design-workshop.html"
     />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="noindex, follow" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -143,14 +143,6 @@
           "@type": "Person",
           "name": "Jessica Morari",
           "url": "https://jessicamorari.com"
-        },
-        "offers": {
-          "@type": "Offer",
-          "url": "https://buy.stripe.com/3cI28r5Fyb3F4AZbAI6J206",
-          "price": "42.00",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock",
-          "validFrom": "2026-09-28"
         }
       }
     </script>
@@ -318,6 +310,9 @@
             </div>
           </nav>
           <main class="flex-grow pt-20">
+            <div role="status" class="bg-secondary text-white text-center px-4 py-4 font-bold">
+              Questo workshop si è già svolto. <a href="contact.html" style="text-decoration: underline">Contattami</a>
+            </div>
             <section class="bg-gray-50 py-20 lg:py-32 overflow-hidden">
               <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -340,10 +335,9 @@
                     </ul>
                     <div>
                       <a
-                        href="https://buy.stripe.com/3cI28r5Fyb3F4AZbAI6J206"
-                        data-checkout="true"
+                        href="contact.html"
                         class="inline-block bg-primary text-white px-10 py-5 rounded-full font-bold title-caps text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-transform"
-                      >Prenota il tuo posto</a>
+                      >Contattami</a>
                     </div>
                   </div>
                   <div class="relative">
@@ -466,10 +460,9 @@
                 </div>
                 <div class="mt-12">
                   <a
-                    href="https://buy.stripe.com/3cI28r5Fyb3F4AZbAI6J206"
-                    data-checkout="true"
+                    href="contact.html"
                     class="inline-block bg-primary text-white px-10 py-5 rounded-full font-bold title-caps text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-transform"
-                  >Voglio partecipare</a>
+                  >Contattami</a>
                 </div>
               </div>
             </section>
@@ -566,10 +559,9 @@
                     </p>
                     <div class="mt-8">
                       <a
-                        href="https://buy.stripe.com/3cI28r5Fyb3F4AZbAI6J206"
-                        data-checkout="true"
+                        href="contact.html"
                         class="inline-block bg-primary text-white px-10 py-4 rounded-full font-bold title-caps text-base shadow-xl shadow-primary/20 hover:scale-105 transition-transform"
-                      >Prenota il tuo posto</a>
+                      >Contattami</a>
                     </div>
                   </div>
                 </div>
@@ -585,10 +577,9 @@
                   <p><strong class="text-secondary">Al resto lavoriamo insieme.</strong></p>
                 </div>
                 <a
-                  href="https://buy.stripe.com/3cI28r5Fyb3F4AZbAI6J206"
-                  data-checkout="true"
+                  href="contact.html"
                   class="inline-block bg-primary text-white px-10 py-5 rounded-full font-bold title-caps text-lg shadow-xl hover:scale-105 transition-transform"
-                >Ci sono — prenota il mio posto</a>
+                >Contattami</a>
                 <p class="text-gray-600 leading-relaxed max-w-2xl mx-auto mt-6">
                   <strong class="text-secondary">PS.</strong> Hai un codice sconto? Mi raccomando, ricordati di aggiungerlo quando fai il checkout!
                 </p>
@@ -780,26 +771,6 @@
       </article>
     </section>
     <!-- Scripts moved to end of body to prevent render-blocking -->
-    <script>
-      document.querySelectorAll("[data-checkout]").forEach((link) => {
-        link.addEventListener("click", () => {
-          if (typeof fbq === "function") {
-            fbq("track", "InitiateCheckout", {
-              content_name: "Life Design Workshop",
-              value: 42,
-              currency: "EUR",
-            });
-          }
-          if (typeof gtag === "function") {
-            gtag("event", "begin_checkout", {
-              currency: "EUR",
-              value: 42,
-              items: [{ item_name: "Life Design Workshop" }],
-            });
-          }
-        });
-      });
-    </script>
     <script src="./js/app.js" defer></script>
   </body>
 </html>
